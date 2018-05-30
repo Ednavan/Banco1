@@ -6,17 +6,18 @@ public class appConta {
 		Pessoa p1 = new Pessoa("fulano", "fulanogmail.com");
 		Pessoa p2 = new Pessoa("cicrano", "cicranogmail.com");
 		Conta c1 = new Conta();
-		Conta c2 = new Conta(12222,p1, 180.0f);
+		Conta c2 = new Conta(22088451,p1, 750.00f);
 		
 		p2.setNome("Cicrano");
 		p2.setEmail("circranogmail.com");
 		c1.setCorrentista(p2);
 		c1.setNumero(182823);
-		c1.setSaldo(180.0f);
-		
+	//c1.setSaldo(180.0f);
+	
 		c2.getNumero();
 		c2.getCorrentista();
 		c2.getSaldo();
+		c2.sacar(850.00f);
 		
 		
 		System.out.println("O nome do correntista: " + c1.getCorrentista().getNome());

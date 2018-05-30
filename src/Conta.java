@@ -45,4 +45,14 @@ public class Conta {
 	public void depositar(float valor) {
 		this.setSaldo(this.getSaldo()+valor);//metodo depositar que vai inserir no saldo mais uma valor de deposito		
 	}
+	public boolean sacar(float valor) {
+		if(this.getSaldo() >= valor) {
+			this.setSaldo((this.getSaldo()- valor));
+			return true;
+			
+		}
+		return false;//se o valor for menor retornara false
+		
+	}
+
 }
