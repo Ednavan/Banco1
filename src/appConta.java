@@ -17,7 +17,7 @@ public class appConta {
 		c2.getNumero();
 		c2.getCorrentista();
 		c2.getSaldo();
-		c2.sacar(850.00f);
+		
 		
 		
 		System.out.println("O nome do correntista: " + c1.getCorrentista().getNome());
@@ -28,7 +28,26 @@ public class appConta {
 		
 		System.out.println("O nome do correntista: " + c2.getCorrentista().getNome());
 		System.out.println("O número da conta: " + c2.getNumero());
+
+		
+		
 		System.out.println("O valor incial da conta: " + c2.getSaldo());
+		
+		if (c2.sacar(100.0f)) {
+			System.out.println("Saque efetuado com sucesso");
+			
+				
+		}else {
+			System.out.println("Saque não realizado com sucesso");
+			
+			c2.depositar(100.00f);
+			
+			System.out.println("Saque efetuado com sucesso");
+			
+		}
+		System.out.println("Saldo atual "+ c2.getSaldo());
+		
+		
 	}
 
 }
